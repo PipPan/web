@@ -1,6 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 
-def home(request):
-    return HttpResponse('Bummm')
+class HomepageView(TemplateView):
+    template_name = 'home/home.html'
+
+
+class AboutView(TemplateView):
+    template_name = 'home/about.html'
